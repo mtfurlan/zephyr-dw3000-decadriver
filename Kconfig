@@ -1,8 +1,15 @@
 menuconfig DW3000
+
 	bool "DW3000"
 	depends on SPI
 	help
 		Qorvo/Decawave DW3000 driver
+
+config UWB_STACK
+	bool "UWB_STACK"
+	depends on DW3000
+	help
+		Qorvo/Decawave UWB Stack library
 
 module = DW3000
 module-str = dw3000
